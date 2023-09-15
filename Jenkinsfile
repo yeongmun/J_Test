@@ -14,10 +14,12 @@ pipeline {
         //         git branch: 'yeong_dev', credentialsId: '4b9e6386-246b-414c-8ff2-288af986c401', url: 'https://github.com/seyoung0698/blink-app'
         //     }
         // }
-        
+
         stage('Kill') {
-            echo '>>> now Playing Process Kill'
-            sh 'sudo ./pkill.sh'
+            steps {
+                echo '>>> now Playing Process Kill'
+                sh 'sudo ./pkill.sh'
+            }
         }
 
         stage('Build') {
