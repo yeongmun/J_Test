@@ -19,7 +19,6 @@ pipeline {
             steps {
                 echo '>>> now Playing Process Kill'
                 dir('/var/lib/jenkins/workspace') {
-                    sh 'pwd'
                     sh 'sudo ./pkill.sh'
                 }
             }
