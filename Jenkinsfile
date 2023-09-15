@@ -19,14 +19,14 @@ pipeline {
                 dir('/var/lib/jenkins/workspace/Test') {
             // some block
             sh "sudo npm install"
-            sh "sudo npm run dev"
+            sh "sudo npm run build"
             }
         }
         }
-        // stage("Deploy") {
-        //     steps {
-        //         sh "sudo npm run start"
-        //     }
-        // }
+        stage("Deploy") {
+            steps {
+                sh "sudo npm run start"
+            }
+        }
     }
 }
