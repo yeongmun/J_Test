@@ -39,7 +39,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo '>>> New Project Deploy'
-                dir('/var/lib/jenkins/workspace/Test') {
+                dir('/var/lib/jenkins/workspace') {
                 sh 'sudo ./run.daemon start'
                 }
             }
