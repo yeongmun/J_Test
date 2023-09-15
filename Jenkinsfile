@@ -18,7 +18,10 @@ pipeline {
         stage('Kill') {
             steps {
                 echo '>>> now Playing Process Kill'
-                sh 'sudo ./pkill.sh'
+                dir('/var/lib/jenkins/workspace') {
+                    sh 'pwd'
+                    sh 'sudo ./pkill.sh'
+                }
             }
         }
 
