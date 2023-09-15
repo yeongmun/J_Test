@@ -39,7 +39,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo '>>> New Project Deploy'
-                sh 'sudo npm run start'
+                dir('/var/lib/jenkins/workspace/Test') {
+                sh 'sudo ./run.daemon start'
+                }
             }
         }
     }
