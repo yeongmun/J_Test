@@ -16,7 +16,7 @@ pipeline {
         stage("Build") {
             steps {
                 echo "Build..."
-                dir('/var/lib/jenkins/workspace/Blink_FrondEnd') {
+                dir('/var/lib/jenkins/workspace/Test') {
             // some block
             sh "sudo npm install"
             sh "sudo npm run build"
